@@ -1,0 +1,133 @@
+
+/* TEST: Überschriften färben
+.bd-content h1 {
+  color: red !important;
+}
+.bd-content h2 {
+  color: darkorange !important;
+}
+.bd-content h3 {
+  color: olive !important;
+} */
+
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-roman.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-italic.woff") format("woff");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-semibold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-semibolditalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-bold.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Crimson";
+  src: url("font/crimson-bolditalic.woff") format("woff");
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* === Schriftvariablen === */
+:root {
+  --font-serif: "Crimson", Georgia, "Times New Roman", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-code: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* === Fließtext: Crimson === */
+body {
+  font-family: var(--font-serif);
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* === Hauptüberschriften H1 === */
+.bd-content h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 80px 0 0 0;
+  padding-bottom: 6px;
+}
+
+/* === H2 mit elegantem Abstand und Größe === */
+.bd-content h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 69px 0 0 0;
+  padding-bottom: 3px;
+}
+
+/* === H3 kursiv, etwas kleiner === */
+.bd-content h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 71px 0 0 0;
+  padding-bottom: 1px;
+}
+
+/* === <small> in h2 und h3: schmal, rechts ausgerichtet === */
+.bd-content h2 small,
+.bd-content h3 small {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.7em;
+  float: right;
+}
+
+/* === Code: Monospace-Schrift === */
+code, pre {
+  font-family: var(--font-code);
+  /* font-size: 0.95em; */
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* === Tabellen schlicht === */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+
+th, td {
+  padding: 0.5em;
+  text-align: left;
+}
+
+/* === Absatzabstand === */
+p {
+  margin-bottom: 1em;
+}
+
+/* Die linke Sidebar (Inhaltsverzeichnis  usw.)  soll eine serifenlose Schriftart haben */
+.sidebar-primary-item {
+  font-family: var(--font-sans);
+}
+
+aside.margin {
+  font-size: 0.85em;
+}

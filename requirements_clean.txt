@@ -1,0 +1,9 @@
+download-link-replacer==1.0.4
+jupyterbook-patches==1.6.2
+sphinx-exercise==1.0.1
+sphinx-iframes==1.0.6
+sphinx-image-inverter==1.1.9
+sphinx-named-colors==1.0.1
+sphinx-thebe @ git+https://github.com/TeachBooks/Sphinx-Thebe@94dd8702423894fe2f06417a5cc07948767021bb
+teachbooks==0.2.2
+teachbooks-sphinx-tippy==1.0.11
